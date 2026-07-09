@@ -1,0 +1,85 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Build and publish GitHub release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Validate release tag
+        id: version
+        shell: bash
+        run: |
+          minecraft_version="$(sed -n 's/^minecraft_version=//p' gradle.properties)"
+          mod_version="$(sed -n 's/^mod_version=//p' gradle.properties)"
+          expected_tag="v${minecraft_version}-${mod_version}"
+
+          if [[ "${GITHUB_REF_NAME}" != "${expected_tag}" ]]; then
+            echo "Expected tag ${expected_tag}, got ${GITHUB_REF_NAME}." >&2
+            exit 1
+          fi
+
+          echo "minecraft_version=${minecraft_version}" >> "${GITHUB_OUTPUT}"
+          echo "mod_version=${mod_version}" >> "${GITHUB_OUTPUT}"
+          echo "release_title=Mekanism: Suit Survival Units ${mod_version} for Minecraft ${minecraft_version}" >> "${GITHUB_OUTPUT}"
+
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: 8.12
+
+      - name: Build
+        run: gradle clean build --no-daemon --stacktrace
+
+      - name: Prepare release asset
+        id: asset
+        shell: bash
+        run: |
+          mapfile -t jars < <(find build/libs -maxdepth 1 -type f -name '*.jar' ! -name '*-sources.jar' ! -name '*-javadoc.jar' ! -name '*-dev.jar' | sort)
+
+          if [[ ${#jars[@]} -ne 1 ]]; then
+            echo "Expected exactly one release jar, found ${#jars[@]}." >&2
+            printf '%s\n' "${jars[@]}" >&2
+            exit 1
+          fi
+
+          jar_name="$(basename "${jars[0]}")"
+          (cd build/libs && sha256sum "${jar_name}") > "${jars[0]}.sha256"
+          echo "jar=${jars[0]}" >> "${GITHUB_OUTPUT}"
+          echo "checksum=${jars[0]}.sha256" >> "${GITHUB_OUTPUT}"
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TITLE: ${{ steps.version.outputs.release_title }}
+          MOD_VERSION: ${{ steps.version.outputs.mod_version }}
+          RELEASE_JAR: ${{ steps.asset.outputs.jar }}
+          RELEASE_CHECKSUM: ${{ steps.asset.outputs.checksum }}
+        shell: bash
+        run: |
+          release_flags=(--verify-tag --generate-notes --title "${RELEASE_TITLE}")
+          if [[ "${MOD_VERSION}" == *-* ]]; then
+            release_flags+=(--prerelease)
+          fi
+
+          gh release create "${GITHUB_REF_NAME}" "${RELEASE_JAR}" "${RELEASE_CHECKSUM}" "${release_flags[@]}"
