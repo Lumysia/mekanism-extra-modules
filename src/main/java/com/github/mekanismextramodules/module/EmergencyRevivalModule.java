@@ -24,8 +24,11 @@ public final class EmergencyRevivalModule implements ICustomModule<EmergencyRevi
         if (!module.isEnabled()) {
             return;
         }
+        if (!ProtectionService.canUseEmergencyRevival(player)) {
+            return;
+        }
         long requiredEnergy = EnergyService.feToJoules(ExtraModulesConfig.REVIVAL_ENERGY_COST.get());
-        boolean charged = ProtectionService.canUseEmergencyRevival(player) && module.canUseEnergy(player, stack, requiredEnergy);
+        boolean charged = module.canUseEnergy(player, stack, requiredEnergy);
         hudElementAdder.accept(IModuleHelper.INSTANCE.hudElement(
                 ICON,
                 Component.translatable(charged
