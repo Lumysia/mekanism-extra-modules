@@ -41,3 +41,7 @@ Last-second recovery when a hit would kill the player.
 
 - Items are registered into the Mekanism Tools creative tab.
 - Phase Guard is controlled through Mekanism's module UI.
+
+## License
+
+Licensed under the GNU Affero General Public License v3.0 or later (`AGPL-3.0-or-later`). See [LICENSE](LICENSE).
