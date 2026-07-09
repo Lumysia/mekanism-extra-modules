@@ -1,0 +1,16 @@
+{
+  "item.mekanism_suit_survival_units.phase_guard_unit": "Jednotka fázové ochrany",
+  "item.mekanism_suit_survival_units.chaos_anchor_unit": "Jednotka kotvy chaosu",
+  "item.mekanism_suit_survival_units.emergency_revival_unit": "Jednotka nouzového oživení",
+  "module.mekanism_suit_survival_units.phase_guard_unit": "Jednotka fázové ochrany",
+  "module.mekanism_suit_survival_units.chaos_anchor_unit": "Jednotka kotvy chaosu",
+  "module.mekanism_suit_survival_units.emergency_revival_unit": "Jednotka nouzového oživení",
+  "description.mekanism_suit_survival_units.phase_guard_unit": "Při zapnutí spotřebovává 500 kFE/t k rušení příchozího poškození a událostí smrti.",
+  "description.mekanism_suit_survival_units.chaos_anchor_unit": "Vyžaduje aktivní fázovou ochranu. Chrání proti obejití zápisu zdraví laserem Chaos Guardiana z Draconic Evolution.",
+  "description.mekanism_suit_survival_units.emergency_revival_unit": "Při smrtelném poškození spotřebuje 10 MFE, zruší smrt, obnoví 4 zdraví a použije krátké efekty ve stylu totemu.",
+  "hud.mekanism_suit_survival_units.phase_guard.active": "Fázová ochrana aktivní",
+  "hud.mekanism_suit_survival_units.phase_guard.inactive": "Fázová ochrana neaktivní",
+  "hud.mekanism_suit_survival_units.emergency_revival.ready": "Nouzové oživení připraveno",
+  "hud.mekanism_suit_survival_units.emergency_revival.no_energy": "Nouzové oživení bez energie",
+  "message.mekanism_suit_survival_units.emergency_revival.triggered": "Nouzové oživení spuštěno"
+}

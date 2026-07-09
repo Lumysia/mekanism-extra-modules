@@ -1,0 +1,16 @@
+{
+  "item.mekanism_suit_survival_units.phase_guard_unit": "Модуль фазового захисту",
+  "item.mekanism_suit_survival_units.chaos_anchor_unit": "Модуль якоря хаосу",
+  "item.mekanism_suit_survival_units.emergency_revival_unit": "Модуль екстреного відродження",
+  "module.mekanism_suit_survival_units.phase_guard_unit": "Модуль фазового захисту",
+  "module.mekanism_suit_survival_units.chaos_anchor_unit": "Модуль якоря хаосу",
+  "module.mekanism_suit_survival_units.emergency_revival_unit": "Модуль екстреного відродження",
+  "description.mekanism_suit_survival_units.phase_guard_unit": "Коли увімкнено, споживає 500 kFE/t, щоб скасовувати вхідну шкоду та події смерті.",
+  "description.mekanism_suit_survival_units.chaos_anchor_unit": "Потребує активного фазового захисту. Захищає від обходів прямого запису здоров'я лазером Chaos Guardian з Draconic Evolution.",
+  "description.mekanism_suit_survival_units.emergency_revival_unit": "При смертельній шкоді споживає 10 MFE, скасовує смерть, відновлює 4 здоров'я та накладає короткі ефекти в стилі тотема.",
+  "hud.mekanism_suit_survival_units.phase_guard.active": "Фазовий захист активний",
+  "hud.mekanism_suit_survival_units.phase_guard.inactive": "Фазовий захист неактивний",
+  "hud.mekanism_suit_survival_units.emergency_revival.ready": "Екстрене відродження готове",
+  "hud.mekanism_suit_survival_units.emergency_revival.no_energy": "Екстрене відродження не заряджене",
+  "message.mekanism_suit_survival_units.emergency_revival.triggered": "Екстрене відродження спрацювало"
+}

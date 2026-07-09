@@ -1,0 +1,16 @@
+{
+  "item.mekanism_suit_survival_units.phase_guard_unit": "Faz Koruma Birimi",
+  "item.mekanism_suit_survival_units.chaos_anchor_unit": "Kaos Çapası Birimi",
+  "item.mekanism_suit_survival_units.emergency_revival_unit": "Acil Diriliş Birimi",
+  "module.mekanism_suit_survival_units.phase_guard_unit": "Faz Koruma Birimi",
+  "module.mekanism_suit_survival_units.chaos_anchor_unit": "Kaos Çapası Birimi",
+  "module.mekanism_suit_survival_units.emergency_revival_unit": "Acil Diriliş Birimi",
+  "description.mekanism_suit_survival_units.phase_guard_unit": "Etkin olduğunda gelen hasarı ve ölüm olaylarını iptal etmek için 500 kFE/t tüketir.",
+  "description.mekanism_suit_survival_units.chaos_anchor_unit": "Faz Koruma'nın aktif olmasını gerektirir. Draconic Evolution Chaos Guardian lazerinin sağlık yazma baypaslarına karşı korur.",
+  "description.mekanism_suit_survival_units.emergency_revival_unit": "Ölümcül hasarda ölümü iptal etmek, 4 sağlık yenilemek ve kısa totem tarzı etkiler uygulamak için 10 MFE tüketir.",
+  "hud.mekanism_suit_survival_units.phase_guard.active": "Faz Koruma aktif",
+  "hud.mekanism_suit_survival_units.phase_guard.inactive": "Faz Koruma pasif",
+  "hud.mekanism_suit_survival_units.emergency_revival.ready": "Acil Diriliş hazır",
+  "hud.mekanism_suit_survival_units.emergency_revival.no_energy": "Acil Diriliş şarjsız",
+  "message.mekanism_suit_survival_units.emergency_revival.triggered": "Acil Diriliş tetiklendi"
+}

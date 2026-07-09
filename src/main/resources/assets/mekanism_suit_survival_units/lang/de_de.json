@@ -1,0 +1,16 @@
+{
+  "item.mekanism_suit_survival_units.phase_guard_unit": "Phasenschutz-Einheit",
+  "item.mekanism_suit_survival_units.chaos_anchor_unit": "Chaosanker-Einheit",
+  "item.mekanism_suit_survival_units.emergency_revival_unit": "Notfallwiederbelebungs-Einheit",
+  "module.mekanism_suit_survival_units.phase_guard_unit": "Phasenschutz-Einheit",
+  "module.mekanism_suit_survival_units.chaos_anchor_unit": "Chaosanker-Einheit",
+  "module.mekanism_suit_survival_units.emergency_revival_unit": "Notfallwiederbelebungs-Einheit",
+  "description.mekanism_suit_survival_units.phase_guard_unit": "Verbraucht im aktivierten Zustand 500 kFE/t, um eingehenden Schaden und Todesereignisse aufzuheben.",
+  "description.mekanism_suit_survival_units.chaos_anchor_unit": "Erfordert aktiven Phasenschutz. Schützt vor Gesundheits-Schreibumgehungen durch den Laser des Chaos Guardian aus Draconic Evolution.",
+  "description.mekanism_suit_survival_units.emergency_revival_unit": "Verbraucht bei tödlichem Schaden 10 MFE, hebt den Tod auf, stellt 4 Gesundheit wieder her und wendet kurzzeitige totemartige Effekte an.",
+  "hud.mekanism_suit_survival_units.phase_guard.active": "Phasenschutz aktiv",
+  "hud.mekanism_suit_survival_units.phase_guard.inactive": "Phasenschutz inaktiv",
+  "hud.mekanism_suit_survival_units.emergency_revival.ready": "Notfallwiederbelebung bereit",
+  "hud.mekanism_suit_survival_units.emergency_revival.no_energy": "Notfallwiederbelebung ungeladen",
+  "message.mekanism_suit_survival_units.emergency_revival.triggered": "Notfallwiederbelebung ausgelöst"
+}

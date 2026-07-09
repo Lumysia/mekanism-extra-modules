@@ -1,0 +1,16 @@
+{
+  "item.mekanism_suit_survival_units.phase_guard_unit": "相位护盾单元",
+  "item.mekanism_suit_survival_units.chaos_anchor_unit": "混沌锚定单元",
+  "item.mekanism_suit_survival_units.emergency_revival_unit": "紧急复苏单元",
+  "module.mekanism_suit_survival_units.phase_guard_unit": "相位护盾单元",
+  "module.mekanism_suit_survival_units.chaos_anchor_unit": "混沌锚定单元",
+  "module.mekanism_suit_survival_units.emergency_revival_unit": "紧急复苏单元",
+  "description.mekanism_suit_survival_units.phase_guard_unit": "启用时每 tick 消耗 500 kFE，用于抵消进入穿戴者的伤害和死亡事件。",
+  "description.mekanism_suit_survival_units.chaos_anchor_unit": "需要相位护盾处于激活状态。用于抵抗 Draconic Evolution 混沌守卫者激光绕过常规伤害流程的直接生命写入。",
+  "description.mekanism_suit_survival_units.emergency_revival_unit": "受到致命伤害时消耗 10 MFE 取消死亡，恢复 4 点生命，并施加短暂的图腾类效果。",
+  "hud.mekanism_suit_survival_units.phase_guard.active": "相位护盾已激活",
+  "hud.mekanism_suit_survival_units.phase_guard.inactive": "相位护盾未激活",
+  "hud.mekanism_suit_survival_units.emergency_revival.ready": "紧急复苏就绪",
+  "hud.mekanism_suit_survival_units.emergency_revival.no_energy": "紧急复苏未充能",
+  "message.mekanism_suit_survival_units.emergency_revival.triggered": "紧急复苏已触发"
+}

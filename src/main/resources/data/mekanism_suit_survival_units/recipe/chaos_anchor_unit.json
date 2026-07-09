@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OCO",
+    "APA",
+    "OCO"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "C": {
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    "A": {
+      "item": "mekanism:alloy_atomic"
+    },
+    "P": {
+      "item": "mekanism_suit_survival_units:phase_guard_unit"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "mekanism_suit_survival_units:chaos_anchor_unit"
+  }
+}

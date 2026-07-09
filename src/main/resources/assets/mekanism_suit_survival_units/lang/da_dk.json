@@ -1,0 +1,16 @@
+{
+  "item.mekanism_suit_survival_units.phase_guard_unit": "Fasebeskyttelsesenhed",
+  "item.mekanism_suit_survival_units.chaos_anchor_unit": "Kaosankerenhed",
+  "item.mekanism_suit_survival_units.emergency_revival_unit": "Nødgenoplivningsenhed",
+  "module.mekanism_suit_survival_units.phase_guard_unit": "Fasebeskyttelsesenhed",
+  "module.mekanism_suit_survival_units.chaos_anchor_unit": "Kaosankerenhed",
+  "module.mekanism_suit_survival_units.emergency_revival_unit": "Nødgenoplivningsenhed",
+  "description.mekanism_suit_survival_units.phase_guard_unit": "Bruger 500 kFE/t, mens den er aktiveret, for at annullere indkommende skade og dødshændelser.",
+  "description.mekanism_suit_survival_units.chaos_anchor_unit": "Kræver at fasebeskyttelse er aktiv. Beskytter mod Draconic Evolution Chaos Guardians laseromgåelser af helbredsskrivning.",
+  "description.mekanism_suit_survival_units.emergency_revival_unit": "Bruger 10 MFE ved dødelig skade for at annullere døden, gendanne 4 helbred og anvende korte totemlignende effekter.",
+  "hud.mekanism_suit_survival_units.phase_guard.active": "Fasebeskyttelse aktiv",
+  "hud.mekanism_suit_survival_units.phase_guard.inactive": "Fasebeskyttelse inaktiv",
+  "hud.mekanism_suit_survival_units.emergency_revival.ready": "Nødgenoplivning klar",
+  "hud.mekanism_suit_survival_units.emergency_revival.no_energy": "Nødgenoplivning ikke opladet",
+  "message.mekanism_suit_survival_units.emergency_revival.triggered": "Nødgenoplivning udløst"
+}
