@@ -64,7 +64,7 @@ public final class ExtraModulesConfig {
         PHASE_ENABLED = builder.define("enabled", true);
         builder.comment("Forge Energy (FE) consumed each tick while Phase Guard is active. 20 ticks = 1 second.");
         PHASE_ENERGY_COST_PER_TICK = builder.defineInRange("energyCostPerTick", 500_000L, 0L, Long.MAX_VALUE);
-        builder.comment("Applies vanilla invulnerability time after Phase Guard blocks damage.");
+        builder.comment("Applies vanilla invulnerability time when Phase Guard blocks damage.");
         PHASE_SET_INVULNERABLE_TIME = builder.define("setInvulnerableTime", true);
         builder.comment("Minimum invulnerability time maintained after protection. Only used when setInvulnerableTime is true.");
         PHASE_INVULNERABILITY_TICKS = builder.defineInRange("invulnerabilityTicks", 2, 0, 200);

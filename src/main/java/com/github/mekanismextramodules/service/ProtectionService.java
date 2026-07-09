@@ -38,6 +38,12 @@ public final class ProtectionService {
         }
         if (isPhaseGuardActive(player)) {
             event.setInvulnerable(true);
+            if (!event.getOriginalInvulnerability()) {
+                if (ExtraModulesConfig.PHASE_SET_INVULNERABLE_TIME.get()) {
+                    player.invulnerableTime = Math.max(player.invulnerableTime, ExtraModulesConfig.PHASE_INVULNERABILITY_TICKS.get());
+                }
+                logProtection("Blocked damage from {}", event.getSource().getMsgId());
+            }
         }
     }
 
@@ -172,9 +178,6 @@ public final class ProtectionService {
         }
         if (ExtraModulesConfig.PHASE_RESET_FALL_DISTANCE.get()) {
             player.fallDistance = 0.0F;
-        }
-        if (ExtraModulesConfig.PHASE_SET_INVULNERABLE_TIME.get()) {
-            player.invulnerableTime = Math.max(player.invulnerableTime, ExtraModulesConfig.PHASE_INVULNERABILITY_TICKS.get());
         }
     }
 
