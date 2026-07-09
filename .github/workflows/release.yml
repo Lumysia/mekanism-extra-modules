@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - name: Validate release tag
         id: version
@@ -68,6 +70,25 @@ jobs:
           echo "jar=${jars[0]}" >> "${GITHUB_OUTPUT}"
           echo "checksum=${jars[0]}.sha256" >> "${GITHUB_OUTPUT}"
 
+      - name: Prepare release notes
+        id: notes
+        shell: bash
+        run: |
+          notes_file="${RUNNER_TEMP}/release-notes.md"
+          previous_tag="$(git describe --tags --abbrev=0 "${GITHUB_SHA}^" 2>/dev/null || true)"
+
+          {
+            echo "## Commits"
+            echo
+            if [[ -n "${previous_tag}" ]]; then
+              git log --first-parent --pretty=format:'- %s (`%h`)' "${previous_tag}..${GITHUB_SHA}"
+            else
+              git log --first-parent --pretty=format:'- %s (`%h`)' "${GITHUB_SHA}"
+            fi
+          } > "${notes_file}"
+
+          echo "file=${notes_file}" >> "${GITHUB_OUTPUT}"
+
       - name: Create GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -75,9 +96,10 @@ jobs:
           MOD_VERSION: ${{ steps.version.outputs.mod_version }}
           RELEASE_JAR: ${{ steps.asset.outputs.jar }}
           RELEASE_CHECKSUM: ${{ steps.asset.outputs.checksum }}
+          RELEASE_NOTES: ${{ steps.notes.outputs.file }}
         shell: bash
         run: |
-          release_flags=(--verify-tag --generate-notes --title "${RELEASE_TITLE}")
+          release_flags=(--verify-tag --generate-notes --notes-file "${RELEASE_NOTES}" --title "${RELEASE_TITLE}")
           if [[ "${MOD_VERSION}" == *-* ]]; then
             release_flags+=(--prerelease)
           fi
