@@ -11,16 +11,10 @@ public final class ChaosCompatService {
         if (!(player instanceof ServerPlayer serverPlayer)) {
             return false;
         }
-        if (!ExtraModulesConfig.CHAOS_ENABLED.get() || !ExtraModulesConfig.CHAOS_ALLOW_MIXIN_PROTECTION.get()) {
+        if (!ExtraModulesConfig.CHAOS_ALLOW_MIXIN_PROTECTION.get()) {
             return false;
         }
-        if (!ModList.get().isLoaded("draconicevolution") || !SuitModuleService.hasChaosAnchorEnabled(serverPlayer)) {
-            return false;
-        }
-        if (ExtraModulesConfig.REQUIRE_FULL_MEKASUIT.get() && !SuitModuleService.hasFullMekaSuit(serverPlayer)) {
-            return false;
-        }
-        if (ExtraModulesConfig.CHAOS_REQUIRE_PHASE_GUARD_ACTIVE.get() && !ProtectionService.isPhaseGuardActive(serverPlayer)) {
+        if (!ModList.get().isLoaded("draconicevolution") || !ProtectionService.isChaosAnchorActive(serverPlayer)) {
             return false;
         }
         return !ExtraModulesConfig.CHAOS_STRICT_DRACONIC_ONLY.get() || isDraconicGuardianLaser(source);
@@ -30,7 +24,7 @@ public final class ChaosCompatService {
         if (!shouldProtectChaosLaser(player, source)) {
             return false;
         }
-        ProtectionService.stabilize(player);
+        ProtectionService.stabilizePhaseGuard(player);
         return true;
     }
 
@@ -38,19 +32,13 @@ public final class ChaosCompatService {
         if (!(player instanceof ServerPlayer serverPlayer)) {
             return false;
         }
-        if (!ExtraModulesConfig.CHAOS_ENABLED.get() || !ExtraModulesConfig.CHAOS_ALLOW_MIXIN_PROTECTION.get()) {
+        if (!ExtraModulesConfig.CHAOS_ALLOW_MIXIN_PROTECTION.get()) {
             return false;
         }
-        if (!ModList.get().isLoaded("draconicevolution") || !SuitModuleService.hasChaosAnchorEnabled(serverPlayer)) {
+        if (!ModList.get().isLoaded("draconicevolution") || !ProtectionService.isChaosAnchorActive(serverPlayer)) {
             return false;
         }
-        if (ExtraModulesConfig.REQUIRE_FULL_MEKASUIT.get() && !SuitModuleService.hasFullMekaSuit(serverPlayer)) {
-            return false;
-        }
-        if (ExtraModulesConfig.CHAOS_REQUIRE_PHASE_GUARD_ACTIVE.get() && !ProtectionService.isPhaseGuardActive(serverPlayer)) {
-            return false;
-        }
-        ProtectionService.stabilize(serverPlayer);
+        ProtectionService.stabilizePhaseGuard(serverPlayer);
         return true;
     }
 

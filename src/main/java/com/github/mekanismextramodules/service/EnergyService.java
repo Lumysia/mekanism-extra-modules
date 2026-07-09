@@ -1,6 +1,7 @@
 package com.github.mekanismextramodules.service;
 
 import com.github.mekanismextramodules.registry.ExtraModuleRegistry;
+import mekanism.api.energy.IEnergyConversionHelper;
 import mekanism.api.gear.IModule;
 import mekanism.api.gear.IModuleContainer;
 import mekanism.api.gear.IModuleHelper;
@@ -11,26 +12,31 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
 
 public final class EnergyService {
-    public static boolean tryConsumeEnergy(ServerPlayer player, long amount, EnergyContext context) {
-        if (amount <= 0) {
+    public static boolean tryConsumeEnergy(ServerPlayer player, long amountFE, EnergyContext context) {
+        if (amountFE <= 0) {
             return true;
         }
-        return consumeFromMekaSuit(player, amount, context, false) >= amount;
+        return consumeFromMekaSuit(player, amountFE, context, false) >= amountFE;
     }
 
-    public static long consumeFromMekaSuit(ServerPlayer player, long amount, EnergyContext context, boolean simulate) {
-        if (amount <= 0) {
+    public static long consumeFromMekaSuit(ServerPlayer player, long amountFE, EnergyContext context, boolean simulate) {
+        if (amountFE <= 0) {
             return 0L;
         }
+        long amountJoules = feToJoules(amountFE);
         ModuleStack moduleStack = findModuleStack(player, moduleFor(context));
-        if (moduleStack == null || !moduleStack.module().canUseEnergy(player, moduleStack.stack(), amount)) {
+        if (moduleStack == null || !moduleStack.module().canUseEnergy(player, moduleStack.stack(), amountJoules)) {
             return 0L;
         }
         if (simulate) {
-            return amount;
+            return amountFE;
         }
-        moduleStack.module().useEnergy(player, moduleStack.stack(), amount);
-        return amount;
+        moduleStack.module().useEnergy(player, moduleStack.stack(), amountJoules);
+        return amountFE;
+    }
+
+    public static long feToJoules(long amountFE) {
+        return amountFE <= 0 ? 0L : IEnergyConversionHelper.INSTANCE.feConversion().convertFrom(amountFE);
     }
 
     private static ModuleStack findModuleStack(ServerPlayer player, Holder<ModuleData<?>> moduleData) {
@@ -51,7 +57,6 @@ public final class EnergyService {
     private static Holder<ModuleData<?>> moduleFor(EnergyContext context) {
         return switch (context) {
             case EMERGENCY_REVIVAL -> ExtraModuleRegistry.EMERGENCY_REVIVAL;
-            case CHAOS_ANCHOR -> ExtraModuleRegistry.CHAOS_ANCHOR;
             case PHASE_GUARD -> ExtraModuleRegistry.PHASE_GUARD;
         };
     }
