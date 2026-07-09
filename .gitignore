@@ -28,6 +28,3 @@ replay_pid*
 build/
 run/
 out/
-
-# Local implementation planning notes
-docs/IMPLEMENTATION_PLAN_REQUIREMENTS.md
