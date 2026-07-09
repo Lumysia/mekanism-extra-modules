@@ -58,6 +58,6 @@ jobs:
       - name: Upload jar
         uses: actions/upload-artifact@v7
         with:
-          name: mekanism-suit-survival-units
+          name: mekanism-extra-modules
           path: build/libs/*.jar
           if-no-files-found: error

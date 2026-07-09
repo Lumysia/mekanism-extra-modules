@@ -33,7 +33,7 @@ neoForge {
     }
 
     mods {
-        mekanism_suit_survival_units {
+        mekanism_extra_modules {
             sourceSet sourceSets.main
         }
     }
@@ -70,7 +70,7 @@ jar {
                 'Implementation-Title'    : project.name,
                 'Implementation-Version'  : project.jar.archiveVersion,
                 'Implementation-Vendor'   : mod_id,
-                'MixinConfigs'            : 'mekanism_suit_survival_units.mixins.json'
+                'MixinConfigs'            : 'mekanism_extra_modules.mixins.json'
         ])
     }
 }

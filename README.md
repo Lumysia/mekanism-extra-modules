@@ -1,14 +1,14 @@
-![Mekanism: Suit Survival Units banner](docs/banner.png)
+![Mekanism: Extra Modules banner](docs/banner.png)
 
 <p align="center">
-  <img src="docs/icon.png" alt="Mekanism: Suit Survival Units icon" width="128">
+  <img src="docs/icon.png" alt="Mekanism: Extra Modules icon" width="128">
 </p>
 
-# Mekanism: Suit Survival Units
+# Mekanism: Extra Modules
 
-Small Mekanism Tools addon for players who want their MekaSuit to survive the hits that usually ignore normal armor.
+A Mekanism addon that expands its modular gear with new abilities.
 
-It adds three MekaSuit body modules. All three use Mekanism's native module energy system and are installed in the MekaSuit body armor.
+The current release adds three MekaSuit body modules focused on endgame protection. All three use Mekanism's native module energy system and are installed in the MekaSuit body armor.
 
 ## Modules
 

@@ -35,7 +35,7 @@ jobs:
 
           echo "minecraft_version=${minecraft_version}" >> "${GITHUB_OUTPUT}"
           echo "mod_version=${mod_version}" >> "${GITHUB_OUTPUT}"
-          echo "release_title=Mekanism: Suit Survival Units ${mod_version} for Minecraft ${minecraft_version}" >> "${GITHUB_OUTPUT}"
+          echo "release_title=Mekanism: Extra Modules ${mod_version} for Minecraft ${minecraft_version}" >> "${GITHUB_OUTPUT}"
 
       - name: Set up Java
         uses: actions/setup-java@v5

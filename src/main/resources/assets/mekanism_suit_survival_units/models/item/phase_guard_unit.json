@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "mekanism_suit_survival_units:item/phase_guard_unit"
-  }
-}
