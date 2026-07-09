@@ -30,8 +30,16 @@ Extra protection for Draconic Evolution's Chaos Guardian laser behavior.
 Last-second recovery when a hit would kill the player.
 
 - Energy use: **10 MFE** per trigger.
-- Condition: the module must be installed and able to draw enough energy at the lethal hit.
+- Condition: the module must be installed, enabled in the Mekanism module UI, and able to draw enough energy at the lethal hit.
 - Effect: cancels death, restores **4 health**, and applies short totem-style survival effects.
+
+## Configuration
+
+Every gameplay value is configurable per world in `serverconfig/mekanism_extra_modules-server.toml`. Dedicated servers store it under `<world>/serverconfig`; single-player worlds store it in the world's `serverconfig` directory.
+
+Energy values in this file are expressed in Forge Energy (FE) and are converted through Mekanism's configured FE-to-Joules conversion before being consumed.
+
+The generated file documents every option and its valid range. Server owners can tune the modules from forgiving single-player defaults to stricter expert-pack balance.
 
 ## Notes
 
