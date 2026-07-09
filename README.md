@@ -1,9 +1,5 @@
 ![Mekanism: Extra Modules banner](docs/banner.png)
 
-<p align="center">
-  <img src="docs/icon.png" alt="Mekanism: Extra Modules icon" width="128">
-</p>
-
 # Mekanism: Extra Modules
 
 A Mekanism addon that expands its modular gear with new abilities.
