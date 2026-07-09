@@ -1,7 +1,8 @@
 package com.github.mekanismextramodules.module;
 
 import com.github.mekanismextramodules.MekanismExtraModules;
-import com.github.mekanismextramodules.config.ExtraModulesConfig;
+import com.github.mekanismextramodules.service.EnergyService;
+import com.github.mekanismextramodules.service.ProtectionService;
 import mekanism.api.gear.ICustomModule;
 import mekanism.api.gear.IHUDElement;
 import mekanism.api.gear.IModule;
@@ -22,7 +23,8 @@ public final class PhaseGuardModule implements ICustomModule<PhaseGuardModule> {
         if (!module.isEnabled()) {
             return;
         }
-        boolean active = module.canUseEnergy(player, stack, ExtraModulesConfig.PHASE_ENERGY_COST_PER_TICK.get());
+        long requiredEnergy = EnergyService.feToJoules(ProtectionService.currentPhaseGuardCost());
+        boolean active = ProtectionService.canUsePhaseGuard(player) && module.canUseEnergy(player, stack, requiredEnergy);
         hudElementAdder.accept(IModuleHelper.INSTANCE.hudElement(
                 ICON,
                 Component.translatable(active

@@ -2,6 +2,8 @@ package com.github.mekanismextramodules.module;
 
 import com.github.mekanismextramodules.MekanismExtraModules;
 import com.github.mekanismextramodules.config.ExtraModulesConfig;
+import com.github.mekanismextramodules.service.EnergyService;
+import com.github.mekanismextramodules.service.ProtectionService;
 import mekanism.api.gear.ICustomModule;
 import mekanism.api.gear.IHUDElement;
 import mekanism.api.gear.IModule;
@@ -22,7 +24,8 @@ public final class EmergencyRevivalModule implements ICustomModule<EmergencyRevi
         if (!module.isEnabled()) {
             return;
         }
-        boolean charged = module.canUseEnergy(player, stack, ExtraModulesConfig.REVIVAL_ENERGY_COST.get());
+        long requiredEnergy = EnergyService.feToJoules(ExtraModulesConfig.REVIVAL_ENERGY_COST.get());
+        boolean charged = ProtectionService.canUseEmergencyRevival(player) && module.canUseEnergy(player, stack, requiredEnergy);
         hudElementAdder.accept(IModuleHelper.INSTANCE.hudElement(
                 ICON,
                 Component.translatable(charged
