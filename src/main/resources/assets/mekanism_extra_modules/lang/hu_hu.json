@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "Engedélyezi a Káoszhorgony egységet és az opcionális Draconic Evolution-integrációját.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Mixin-védelem engedélyezése",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Engedélyezi az opcionális mixint, amely elfogja a Chaos Guardian közvetlen életerő-átírásait és a kikényszerített halált.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "Szigorú Draconic Evolution-észlelés",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "A sebzésforrások elfogását az azonosított Draconic Evolution-támadásokra korlátozza.",
   "mekanism_extra_modules.configuration.emergency_revival": "Vészhelyzeti újraélesztés",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "A Vészhelyzeti újraélesztő egység beállításai.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "Engedélyezve",

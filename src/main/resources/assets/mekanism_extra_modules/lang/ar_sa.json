@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "يُفعّل وحدة مرساة الفوضى وتكاملها الاختياري مع Draconic Evolution.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "السماح بحماية Mixin",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "يسمح باستخدام Mixin الاختياري الذي يعترض عمليات الكتابة المباشرة إلى صحة حارس الفوضى والموت القسري.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "الكشف الصارم عن Draconic Evolution",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "يقيّد اعتراض مصادر الضرر بهجمات Draconic Evolution التي تم التعرف عليها.",
   "mekanism_extra_modules.configuration.emergency_revival": "الإحياء الطارئ",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "إعدادات وحدة الإحياء الطارئ.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "التفعيل",

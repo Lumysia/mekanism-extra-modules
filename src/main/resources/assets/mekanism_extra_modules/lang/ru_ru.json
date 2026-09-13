@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "Включает модуль якоря хаоса и его дополнительную интеграцию с Draconic Evolution.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Разрешить защиту через миксин",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Разрешает дополнительный миксин, перехватывающий прямые изменения здоровья и принудительную смерть от Chaos Guardian.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "Строгое распознавание Draconic Evolution",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "Ограничивает перехват источников урона распознанными атаками Draconic Evolution.",
   "mekanism_extra_modules.configuration.emergency_revival": "Экстренное возрождение",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "Настройки модуля экстренного возрождения.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "Включено",

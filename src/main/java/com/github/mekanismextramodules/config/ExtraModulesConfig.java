@@ -24,7 +24,6 @@ public final class ExtraModulesConfig {
 
     public static final ModConfigSpec.BooleanValue CHAOS_ENABLED;
     public static final ModConfigSpec.BooleanValue CHAOS_ALLOW_MIXIN_PROTECTION;
-    public static final ModConfigSpec.BooleanValue CHAOS_STRICT_DRACONIC_ONLY;
 
     public static final ModConfigSpec.BooleanValue REVIVAL_ENABLED;
     public static final ModConfigSpec.LongValue REVIVAL_ENERGY_COST;
@@ -82,8 +81,6 @@ public final class ExtraModulesConfig {
         CHAOS_ENABLED = builder.translation(TRANSLATION_PREFIX + "chaos_anchor.enabled").define("enabled", true);
         builder.comment("Allows the optional mixin that intercepts Chaos Guardian direct health writes and forced death.");
         CHAOS_ALLOW_MIXIN_PROTECTION = builder.translation(TRANSLATION_PREFIX + "chaos_anchor.allow_mixin_protection").define("allowMixinProtection", true);
-        builder.comment("Restricts damage-source interception to identified Draconic Evolution attacks.");
-        CHAOS_STRICT_DRACONIC_ONLY = builder.translation(TRANSLATION_PREFIX + "chaos_anchor.strict_draconic_only").define("strictDraconicOnly", true);
         builder.pop();
 
         builder.translation(TRANSLATION_PREFIX + "emergency_revival").push("emergencyRevival");

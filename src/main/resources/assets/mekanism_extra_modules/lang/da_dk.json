@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "Aktiverer kaosankerenheden og dens valgfrie integration med Draconic Evolution.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Tillad mixin-beskyttelse",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Tillader den valgfrie mixin, som opfanger Chaos Guardians direkte ændringer af helbred og fremtvungen død.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "Streng registrering af Draconic Evolution",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "Begrænser opfangning af skadekilder til identificerede angreb fra Draconic Evolution.",
   "mekanism_extra_modules.configuration.emergency_revival": "Nødgenoplivning",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "Indstillinger for nødgenoplivningsenheden.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "Aktiveret",

@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "Enables the Chaos Anchor Unit and its optional Draconic Evolution integration.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Allow Mixin Protection",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Allows the optional mixin that intercepts Chaos Guardian direct health writes and forced death.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "Strict Draconic Evolution Detection",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "Restricts damage-source interception to identified Draconic Evolution attacks.",
   "mekanism_extra_modules.configuration.emergency_revival": "Emergency Revival",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "Settings for the Emergency Revival Unit.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "Enabled",

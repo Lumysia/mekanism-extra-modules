@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "Włącza jednostkę kotwicy chaosu i jej opcjonalną integrację z Draconic Evolution.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Zezwól na ochronę przez mixin",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Zezwala opcjonalnemu mixinowi przechwytywać bezpośrednie zmiany zdrowia i wymuszoną śmierć powodowane przez Chaos Guardiana.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "Ścisłe wykrywanie Draconic Evolution",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "Ogranicza przechwytywanie źródeł obrażeń do rozpoznanych ataków z Draconic Evolution.",
   "mekanism_extra_modules.configuration.emergency_revival": "Awaryjne wskrzeszenie",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "Ustawienia jednostki awaryjnego wskrzeszenia.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "Włączone",

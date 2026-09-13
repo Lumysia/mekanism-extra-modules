@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "Povolí jednotku kotvy chaosu a její volitelnou integraci s Draconic Evolution.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Povolit ochranu mixinem",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Povolí volitelný mixin, který zachytává přímé zápisy zdraví a vynucenou smrt způsobené Chaos Guardianem.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "Přísná detekce Draconic Evolution",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "Omezí zachytávání zdrojů poškození na rozpoznané útoky z Draconic Evolution.",
   "mekanism_extra_modules.configuration.emergency_revival": "Nouzové oživení",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "Nastavení jednotky nouzového oživení.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "Povoleno",
