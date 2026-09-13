@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "Mengaktifkan Unit Jangkar Kekacauan dan integrasi opsionalnya dengan Draconic Evolution.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Izinkan Perlindungan Mixin",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Mengizinkan mixin opsional yang mencegat penulisan langsung nilai health oleh Chaos Guardian dan kematian paksa.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "Deteksi Ketat Draconic Evolution",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "Membatasi pencegatan sumber kerusakan hanya pada serangan yang teridentifikasi berasal dari Draconic Evolution.",
   "mekanism_extra_modules.configuration.emergency_revival": "Kebangkitan Darurat",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "Pengaturan untuk Unit Kebangkitan Darurat.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "Diaktifkan",

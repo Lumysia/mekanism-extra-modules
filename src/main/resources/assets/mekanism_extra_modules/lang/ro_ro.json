@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "Activează Unitatea Ancoră a Haosului și integrarea sa opțională cu Draconic Evolution.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Permite protecția prin mixin",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Permite mixin-ului opțional să intercepteze modificările directe ale sănătății și moartea forțată provocate de Chaos Guardian.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "Detectare strictă Draconic Evolution",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "Restricționează interceptarea surselor de daune la atacurile identificate ca provenind din Draconic Evolution.",
   "mekanism_extra_modules.configuration.emergency_revival": "Reînviere de urgență",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "Setări pentru Unitatea de Reînviere de Urgență.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "Activată",

@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "Kaos Çapası Birimini ve isteğe bağlı Draconic Evolution entegrasyonunu etkinleştirir.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Mixin Korumasına İzin Ver",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Chaos Guardian'ın can değerine doğrudan yazmasını ve zorunlu ölümü engelleyen isteğe bağlı mixin'e izin verir.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "Katı Draconic Evolution Algılaması",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "Hasar kaynağı müdahalesini, Draconic Evolution saldırısı olduğu belirlenen saldırılarla sınırlar.",
   "mekanism_extra_modules.configuration.emergency_revival": "Acil Diriliş",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "Acil Diriliş Birimi ayarları.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "Etkin",

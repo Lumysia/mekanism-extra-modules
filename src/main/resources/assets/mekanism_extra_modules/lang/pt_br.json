@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "Ativa a Unidade de Âncora do Caos e sua integração opcional com o Draconic Evolution.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Permitir proteção por mixin",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Permite o mixin opcional que intercepta alterações diretas na vida e mortes forçadas pelo Chaos Guardian.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "Detecção estrita do Draconic Evolution",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "Restringe a interceptação de fontes de dano aos ataques identificados do Draconic Evolution.",
   "mekanism_extra_modules.configuration.emergency_revival": "Reanimação de Emergência",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "Configurações da Unidade de Reanimação de Emergência.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "Ativada",

@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "启用混沌锚定单元及其可选的 Draconic Evolution 集成功能。",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "允许 Mixin 保护",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "允许使用可选 Mixin，以拦截混沌守卫者对生命值的直接写入和强制死亡。",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "严格检测 Draconic Evolution",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "仅拦截已识别为 Draconic Evolution 攻击的伤害源。",
   "mekanism_extra_modules.configuration.emergency_revival": "紧急复苏",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "紧急复苏单元设置。",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "启用",

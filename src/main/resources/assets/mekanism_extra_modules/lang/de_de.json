@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "Aktiviert die Chaosanker-Einheit und ihre optionale Integration mit Draconic Evolution.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Mixin-Schutz erlauben",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Erlaubt das optionale Mixin, das direkte Änderungen des Gesundheitswerts und erzwungenen Tod durch den Chaos Guardian abfängt.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "Strikte Draconic-Evolution-Erkennung",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "Beschränkt das Abfangen von Schadensquellen auf erkannte Angriffe aus Draconic Evolution.",
   "mekanism_extra_modules.configuration.emergency_revival": "Notfallwiederbelebung",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "Einstellungen für die Notfallwiederbelebungs-Einheit.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "Aktiviert",

@@ -2,12 +2,11 @@ package com.github.mekanismextramodules.service;
 
 import com.github.mekanismextramodules.config.ExtraModulesConfig;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.fml.ModList;
 
 public final class ChaosCompatService {
-    public static boolean shouldProtectChaosLaser(Player player, DamageSource source) {
+    public static boolean shouldProtectChaosLaser(Player player) {
         if (!(player instanceof ServerPlayer serverPlayer)) {
             return false;
         }
@@ -17,11 +16,11 @@ public final class ChaosCompatService {
         if (!ModList.get().isLoaded("draconicevolution") || !ProtectionService.isChaosAnchorActive(serverPlayer)) {
             return false;
         }
-        return !ExtraModulesConfig.CHAOS_STRICT_DRACONIC_ONLY.get() || isDraconicGuardianLaser(source);
+        return true;
     }
 
-    public static boolean protectChaosLaser(Player player, DamageSource source) {
-        if (!shouldProtectChaosLaser(player, source)) {
+    public static boolean protectChaosLaser(Player player) {
+        if (!shouldProtectChaosLaser(player)) {
             return false;
         }
         ProtectionService.stabilizePhaseGuard(player);
@@ -40,11 +39,6 @@ public final class ChaosCompatService {
         }
         ProtectionService.stabilizePhaseGuard(serverPlayer);
         return true;
-    }
-
-    private static boolean isDraconicGuardianLaser(DamageSource source) {
-        String msgId = source.getMsgId();
-        return msgId != null && (msgId.contains("guardian_laser") || msgId.contains("draconicevolution"));
     }
 
     private ChaosCompatService() {

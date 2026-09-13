@@ -24,7 +24,7 @@ public abstract class LaserBeamPhaseMixin {
             at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;die(Lnet/minecraft/world/damagesource/DamageSource;)V")
     )
     private void mekanismExtraModules$guardDie(Player player, DamageSource source) {
-        if (!ChaosCompatService.protectChaosLaser(player, source)) {
+        if (!ChaosCompatService.protectChaosLaser(player)) {
             player.die(source);
         }
     }

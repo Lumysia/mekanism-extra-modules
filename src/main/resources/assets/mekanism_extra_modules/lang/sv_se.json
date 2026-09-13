@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "Aktiverar Kaosankarenheten och dess valfria integrering med Draconic Evolution.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Tillåt mixin-skydd",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Tillåter den valfria mixin-koden som fångar upp Chaos Guardians direkta ändringar av hälsan och framtvingad död.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "Strikt identifiering av Draconic Evolution",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "Begränsar uppfångning av skadekällor till identifierade attacker från Draconic Evolution.",
   "mekanism_extra_modules.configuration.emergency_revival": "Nöduppståndelse",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "Inställningar för Nöduppståndelseenheten.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "Aktiverad",

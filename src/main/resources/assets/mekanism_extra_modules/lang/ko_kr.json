@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "카오스 앵커 유닛과 선택적 Draconic Evolution 연동을 활성화합니다.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "믹스인 보호 허용",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Chaos Guardian의 직접적인 체력 변경과 강제 사망을 가로채는 선택적 믹스인을 허용합니다.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "엄격한 Draconic Evolution 감지",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "피해 원본 가로채기를 Draconic Evolution 공격으로 식별된 경우로 제한합니다.",
   "mekanism_extra_modules.configuration.emergency_revival": "긴급 부활",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "긴급 부활 유닛 설정입니다.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "활성화",

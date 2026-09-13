@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "Bật Đơn vị neo hỗn mang và khả năng tích hợp tùy chọn với Draconic Evolution.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Cho phép bảo vệ bằng mixin",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Cho phép mixin tùy chọn chặn việc Chaos Guardian ghi trực tiếp giá trị máu và cưỡng chế tử vong.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "Phát hiện Draconic Evolution nghiêm ngặt",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "Giới hạn việc chặn nguồn sát thương ở các đòn tấn công đã xác định của Draconic Evolution.",
   "mekanism_extra_modules.configuration.emergency_revival": "Hồi sinh khẩn cấp",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "Cài đặt cho Đơn vị hồi sinh khẩn cấp.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "Bật",

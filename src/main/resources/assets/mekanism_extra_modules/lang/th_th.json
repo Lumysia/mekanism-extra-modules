@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "เปิดใช้งานยูนิตสมอเคออสและการทำงานร่วมกับ Draconic Evolution ซึ่งเป็นตัวเลือกเสริม",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "อนุญาตการป้องกันด้วย Mixin",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "อนุญาตให้ใช้ mixin เสริมที่สกัดกั้นการเขียนค่าพลังชีวิตโดยตรงและการบังคับให้ตายจาก Chaos Guardian",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "ตรวจจับเฉพาะ Draconic Evolution อย่างเคร่งครัด",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "จำกัดการสกัดกั้นแหล่งที่มาของความเสียหายไว้เฉพาะการโจมตีที่ระบุได้ว่ามาจาก Draconic Evolution",
   "mekanism_extra_modules.configuration.emergency_revival": "Emergency Revival",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "การตั้งค่าสำหรับยูนิตชุบชีวิตฉุกเฉิน",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "เปิดใช้งาน",

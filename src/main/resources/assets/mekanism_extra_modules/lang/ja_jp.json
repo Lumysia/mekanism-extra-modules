@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "カオスアンカーユニットと、任意のDraconic Evolution連携を有効にします。",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Mixin保護を許可",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Chaos Guardianによる体力の直接書き換えと強制死亡を阻止する、任意のMixinを許可します。",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "Draconic Evolutionのみを厳密に検出",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "ダメージソースの阻止対象を、Draconic Evolutionの攻撃と特定されたものに限定します。",
   "mekanism_extra_modules.configuration.emergency_revival": "緊急蘇生",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "緊急蘇生ユニットの設定です。",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "有効",

@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "केओस एंकर यूनिट और इसके वैकल्पिक Draconic Evolution एकीकरण को सक्षम करता है।",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Mixin सुरक्षा की अनुमति दें",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "उस वैकल्पिक mixin की अनुमति देता है जो Chaos Guardian द्वारा सीधे स्वास्थ्य मान लिखे जाने और जबरन मृत्यु को अवरोधित करता है।",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "सख्त Draconic Evolution पहचान",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "क्षति-स्रोत अवरोधन को पहचाने गए Draconic Evolution हमलों तक सीमित करता है।",
   "mekanism_extra_modules.configuration.emergency_revival": "आपात पुनर्जीवन",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "आपात पुनर्जीवन यूनिट की सेटिंग्स।",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "सक्षम",

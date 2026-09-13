@@ -47,8 +47,6 @@
   "mekanism_extra_modules.configuration.chaos_anchor.enabled.tooltip": "Ottaa käyttöön Kaaosankkuriyksikön ja sen valinnaisen Draconic Evolution -integraation.",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection": "Salli mixin-suojaus",
   "mekanism_extra_modules.configuration.chaos_anchor.allow_mixin_protection.tooltip": "Sallii valinnaisen mixinin, joka estää Chaos Guardianin suorat terveysarvon muutokset ja pakotetun kuoleman.",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only": "Tarkka Draconic Evolution -tunnistus",
-  "mekanism_extra_modules.configuration.chaos_anchor.strict_draconic_only.tooltip": "Rajaa vahinkolähteiden sieppauksen tunnistettuihin Draconic Evolutionin hyökkäyksiin.",
   "mekanism_extra_modules.configuration.emergency_revival": "Hätäelvytys",
   "mekanism_extra_modules.configuration.emergency_revival.tooltip": "Hätäelvytysyksikön asetukset.",
   "mekanism_extra_modules.configuration.emergency_revival.enabled": "Käytössä",
