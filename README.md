@@ -43,7 +43,7 @@ The generated file documents every option and its valid range. Server owners can
 
 ## Notes
 
-- Items are registered into the Mekanism Tools creative tab.
+- Items are registered into the main Mekanism creative tab alongside Mekanism's own module units.
 - Phase Guard is controlled through Mekanism's module UI.
 
 ## Releases
