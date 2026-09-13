@@ -10,6 +10,8 @@
 - Draconic Evolution is optional. Keep its mixin gated by mod presence so the mod loads without Draconic Evolution installed.
 - Treat registry IDs, translation keys, and shipped config keys as persistent interfaces; change them only with an explicit migration decision.
 - Keep every locale on the same key set. Do not put configurable numeric values in static module descriptions.
+- Keep `README.md` and public docs useful to players or contributors. Put maintainer and agent procedures in `AGENTS.md`, not public guides.
+- Add a new file or public section only when a stated requirement or correctness needs it; related or potentially useful work is not enough.
 
 ## Project Decisions
 
