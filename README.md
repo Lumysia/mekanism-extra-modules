@@ -1,4 +1,4 @@
-![Mekanism: Extra Modules banner](docs/banner.png)
+![Mekanism: Extra Modules banner](https://raw.githubusercontent.com/Lumysia/mekanism-extra-modules/main/docs/banner.png)
 
 # Mekanism: Extra Modules
 
@@ -46,6 +46,10 @@ The generated file documents every option and its valid range. Server owners can
 - Items are registered into the Mekanism Tools creative tab.
 - Phase Guard is controlled through Mekanism's module UI.
 
+## Releases
+
+Maintainer setup and the automated GitHub, Modrinth, and CurseForge release process are documented in [docs/RELEASING.md](https://github.com/Lumysia/mekanism-extra-modules/blob/main/docs/RELEASING.md).
+
 ## License
 
-Licensed under the GNU Lesser General Public License v3.0 or later (`LGPL-3.0-or-later`). See [LICENSE](LICENSE).
+Licensed under the GNU Lesser General Public License v3.0 or later (`LGPL-3.0-or-later`). See [LICENSE](https://github.com/Lumysia/mekanism-extra-modules/blob/main/LICENSE).
