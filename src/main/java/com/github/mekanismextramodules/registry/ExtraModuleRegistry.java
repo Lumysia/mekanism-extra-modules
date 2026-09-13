@@ -20,8 +20,9 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public final class ExtraModuleRegistry {
-    private static final ResourceKey<CreativeModeTab> MEKANISM_TOOLS_TAB = ResourceKey.create(
-            Registries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath("mekanismtools", "mekanismtools"));
+    private static final ResourceKey<CreativeModeTab> MEKANISM_TAB = ResourceKey.create(
+            Registries.CREATIVE_MODE_TAB,
+            ResourceLocation.fromNamespaceAndPath(MekanismAPI.MEKANISM_MODID, MekanismAPI.MEKANISM_MODID));
 
     public static final DeferredRegister<ModuleData<?>> MODULES = DeferredRegister.create(MekanismAPI.MODULE_REGISTRY_NAME, MekanismExtraModules.MODID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MekanismExtraModules.MODID);
@@ -47,7 +48,7 @@ public final class ExtraModuleRegistry {
     }
 
     private static void addCreativeTabContents(BuildCreativeModeTabContentsEvent event) {
-        if (!MEKANISM_TOOLS_TAB.equals(event.getTabKey())) {
+        if (!MEKANISM_TAB.equals(event.getTabKey())) {
             return;
         }
         event.accept(PHASE_GUARD_ITEM.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
