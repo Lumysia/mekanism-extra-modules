@@ -61,6 +61,11 @@ tasks.withType(ProcessResources).configureEach {
     }
 }
 
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
 jar {
     manifest {
         attributes([
