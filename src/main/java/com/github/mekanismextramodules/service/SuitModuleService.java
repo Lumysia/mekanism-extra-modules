@@ -1,6 +1,6 @@
 package com.github.mekanismextramodules.service;
 
-import com.github.mekanismextramodules.registry.ExtraModuleRegistry;
+import mekanism.api.gear.IModule;
 import mekanism.api.gear.IModuleContainer;
 import mekanism.api.gear.IModuleHelper;
 import mekanism.api.gear.ModuleData;
@@ -10,7 +10,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.Nullable;
 
+/**
+ * Looks up this mod's modules on the MekaSuit. All of them are registered for the body armor only.
+ */
 public final class SuitModuleService {
     private static final ResourceLocation HELMET = ResourceLocation.fromNamespaceAndPath("mekanism", "mekasuit_helmet");
     private static final ResourceLocation BODYARMOR = ResourceLocation.fromNamespaceAndPath("mekanism", "mekasuit_bodyarmor");
@@ -24,52 +28,18 @@ public final class SuitModuleService {
                 && isItem(player.getItemBySlot(EquipmentSlot.FEET), BOOTS);
     }
 
-    public static boolean hasPhaseGuard(Player player) {
-        return hasModule(player, ExtraModuleRegistry.PHASE_GUARD);
+    public static boolean hasEnabled(Player player, Holder<ModuleData<?>> module) {
+        return enabledModule(player, module) != null;
     }
 
-    public static boolean hasPhaseGuardEnabled(Player player) {
-        return hasEnabledModule(player, ExtraModuleRegistry.PHASE_GUARD);
+    @Nullable
+    public static IModule<?> enabledModule(Player player, Holder<ModuleData<?>> module) {
+        IModuleContainer container = IModuleHelper.INSTANCE.getModuleContainer(player, EquipmentSlot.CHEST);
+        return container == null ? null : container.getIfEnabled(module);
     }
 
-    public static boolean hasChaosAnchor(Player player) {
-        return hasModule(player, ExtraModuleRegistry.CHAOS_ANCHOR);
-    }
-
-    public static boolean hasChaosAnchorEnabled(Player player) {
-        return hasEnabledModule(player, ExtraModuleRegistry.CHAOS_ANCHOR);
-    }
-
-    public static boolean hasEmergencyRevivalEnabled(Player player) {
-        return hasEnabledModule(player, ExtraModuleRegistry.EMERGENCY_REVIVAL);
-    }
-
-    public static boolean hasModule(Player player, Holder<ModuleData<?>> module) {
-        for (EquipmentSlot slot : new EquipmentSlot[]{EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET}) {
-            ItemStack stack = player.getItemBySlot(slot);
-            if (stack.isEmpty()) {
-                continue;
-            }
-            IModuleContainer container = IModuleHelper.INSTANCE.getModuleContainer(stack);
-            if (container != null && container.has(module)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private static boolean hasEnabledModule(Player player, Holder<ModuleData<?>> module) {
-        for (EquipmentSlot slot : new EquipmentSlot[]{EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET}) {
-            ItemStack stack = player.getItemBySlot(slot);
-            if (stack.isEmpty()) {
-                continue;
-            }
-            IModuleContainer container = IModuleHelper.INSTANCE.getModuleContainer(stack);
-            if (container != null && container.hasEnabled(module)) {
-                return true;
-            }
-        }
-        return false;
+    public static ItemStack bodyArmor(Player player) {
+        return player.getItemBySlot(EquipmentSlot.CHEST);
     }
 
     private static boolean isItem(ItemStack stack, ResourceLocation id) {

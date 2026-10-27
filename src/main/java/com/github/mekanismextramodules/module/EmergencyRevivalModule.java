@@ -21,10 +21,7 @@ public final class EmergencyRevivalModule implements ICustomModule<EmergencyRevi
 
     @Override
     public void addHUDElements(IModule<EmergencyRevivalModule> module, IModuleContainer moduleContainer, ItemStack stack, Player player, Consumer<IHUDElement> hudElementAdder) {
-        if (!module.isEnabled()) {
-            return;
-        }
-        if (!ProtectionService.canUseEmergencyRevival(player)) {
+        if (!module.isEnabled() || !ProtectionService.canUseEmergencyRevival(player)) {
             return;
         }
         long requiredEnergy = EnergyService.feToJoules(ExtraModulesConfig.REVIVAL_ENERGY_COST.get());

@@ -42,7 +42,6 @@ neoForge {
 dependencies {
     compileOnly "mekanism:Mekanism:${mekanism_version}:api"
     runtimeOnly "mekanism:Mekanism:${mekanism_version}"
-    runtimeOnly "mekanism:Mekanism:${mekanism_version}:tools"
 }
 
 tasks.withType(ProcessResources).configureEach {
@@ -74,8 +73,7 @@ jar {
                 'Specification-Version'   : '1',
                 'Implementation-Title'    : project.name,
                 'Implementation-Version'  : project.jar.archiveVersion,
-                'Implementation-Vendor'   : mod_id,
-                'MixinConfigs'            : 'mekanism_extra_modules.mixins.json'
+                'Implementation-Vendor'   : mod_id
         ])
     }
 }
