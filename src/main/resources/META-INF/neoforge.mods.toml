@@ -11,9 +11,12 @@ authors="Lumysia"
 logoFile="mekanism_extra_modules.png"
 description='''${mod_description}'''
 
-# Only applied when Draconic Evolution is present.
 [[mixins]]
 config="mekanism_extra_modules.mixins.json"
+
+# Only applied when Draconic Evolution is present.
+[[mixins]]
+config="mekanism_extra_modules.draconic.mixins.json"
 requiredMods=["draconicevolution"]
 
 [[dependencies.${mod_id}]]
