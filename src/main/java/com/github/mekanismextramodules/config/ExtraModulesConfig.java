@@ -8,7 +8,6 @@ public final class ExtraModulesConfig {
     private static final String TRANSLATION_PREFIX = "mekanism_extra_modules.configuration.";
     public static final ModConfigSpec SERVER_SPEC;
 
-    public static final ModConfigSpec.BooleanValue DEBUG;
     public static final ModConfigSpec.BooleanValue LOG_PROTECTION_EVENTS;
     public static final ModConfigSpec.BooleanValue REQUIRE_FULL_MEKASUIT;
     public static final ModConfigSpec.ConfigValue<List<? extends String>> ALLOWED_DIMENSIONS;
@@ -23,7 +22,6 @@ public final class ExtraModulesConfig {
     public static final ModConfigSpec.BooleanValue PHASE_RESET_FALL_DISTANCE;
 
     public static final ModConfigSpec.BooleanValue CHAOS_ENABLED;
-    public static final ModConfigSpec.BooleanValue CHAOS_ALLOW_MIXIN_PROTECTION;
 
     public static final ModConfigSpec.BooleanValue REVIVAL_ENABLED;
     public static final ModConfigSpec.LongValue REVIVAL_ENERGY_COST;
@@ -47,16 +45,14 @@ public final class ExtraModulesConfig {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
 
         builder.translation(TRANSLATION_PREFIX + "general").push("general");
-        builder.comment("Enables additional diagnostic logging. Leave disabled during normal play.");
-        DEBUG = builder.translation(TRANSLATION_PREFIX + "general.debug").define("debug", false);
         builder.comment("Logs every blocked damage or death event to the server log.");
         LOG_PROTECTION_EVENTS = builder.translation(TRANSLATION_PREFIX + "general.log_protection_events").define("logProtectionEvents", false);
         builder.comment("Requires all four MekaSuit armor pieces for every protection module.");
         REQUIRE_FULL_MEKASUIT = builder.translation(TRANSLATION_PREFIX + "general.require_full_mekasuit").define("requireFullMekaSuit", true);
         builder.comment("Dimensions where modules may work. Empty allows every dimension not listed below.");
-        ALLOWED_DIMENSIONS = builder.translation(TRANSLATION_PREFIX + "general.allowed_dimensions").defineListAllowEmpty("allowedDimensions", List.of(), ExtraModulesConfig::isString);
+        ALLOWED_DIMENSIONS = builder.translation(TRANSLATION_PREFIX + "general.allowed_dimensions").defineListAllowEmpty("allowedDimensions", List.of(), () -> "minecraft:overworld", ExtraModulesConfig::isString);
         builder.comment("Dimensions where protection modules never work. Entries here override allowedDimensions.");
-        BLOCKED_DIMENSIONS = builder.translation(TRANSLATION_PREFIX + "general.blocked_dimensions").defineListAllowEmpty("blockedDimensions", List.of(), ExtraModulesConfig::isString);
+        BLOCKED_DIMENSIONS = builder.translation(TRANSLATION_PREFIX + "general.blocked_dimensions").defineListAllowEmpty("blockedDimensions", List.of(), () -> "minecraft:overworld", ExtraModulesConfig::isString);
         builder.pop();
 
         builder.translation(TRANSLATION_PREFIX + "phase_guard").push("phaseGuard");
@@ -79,8 +75,6 @@ public final class ExtraModulesConfig {
         builder.translation(TRANSLATION_PREFIX + "chaos_anchor").push("chaosAnchor");
         builder.comment("Enables the Chaos Anchor Unit and its optional Draconic Evolution integration.");
         CHAOS_ENABLED = builder.translation(TRANSLATION_PREFIX + "chaos_anchor.enabled").define("enabled", true);
-        builder.comment("Allows the optional mixin that intercepts Chaos Guardian direct health writes and forced death.");
-        CHAOS_ALLOW_MIXIN_PROTECTION = builder.translation(TRANSLATION_PREFIX + "chaos_anchor.allow_mixin_protection").define("allowMixinProtection", true);
         builder.pop();
 
         builder.translation(TRANSLATION_PREFIX + "emergency_revival").push("emergencyRevival");

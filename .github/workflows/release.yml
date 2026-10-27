@@ -326,7 +326,6 @@ jobs:
           java: 21
           dependencies: |
             mekanism(required){modrinth:Ce6I4WUE}
-            mekanism-tools(required){modrinth:tqQpq1lt}
             draconic-evolution(optional){modrinth:nBqivi8H}
           retry-attempts: 1
           fail-mode: fail
@@ -427,7 +426,6 @@ jobs:
           java: 21
           dependencies: |
             mekanism(required){curseforge:268560}
-            mekanism-tools(required){curseforge:268567}
             draconic-evolution(optional){curseforge:223565}
           retry-attempts: 1
           fail-mode: fail

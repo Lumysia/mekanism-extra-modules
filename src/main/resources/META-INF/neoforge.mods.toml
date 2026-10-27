@@ -11,6 +11,11 @@ authors="Lumysia"
 logoFile="mekanism_extra_modules.png"
 description='''${mod_description}'''
 
+# Only applied when Draconic Evolution is present.
+[[mixins]]
+config="mekanism_extra_modules.mixins.json"
+requiredMods=["draconicevolution"]
+
 [[dependencies.${mod_id}]]
 modId="neoforge"
 type="required"
@@ -27,13 +32,6 @@ side="BOTH"
 
 [[dependencies.${mod_id}]]
 modId="mekanism"
-type="required"
-versionRange="[10.7.0,11.0.0)"
-ordering="AFTER"
-side="BOTH"
-
-[[dependencies.${mod_id}]]
-modId="mekanismtools"
 type="required"
 versionRange="[10.7.0,11.0.0)"
 ordering="AFTER"
