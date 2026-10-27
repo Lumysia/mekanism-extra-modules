@@ -29,6 +29,8 @@ import java.util.concurrent.ConcurrentHashMap;
 public final class ProtectionService {
     /** Players whose Phase Guard was paid for on their last server tick. Runtime state only, never saved. */
     private static final Set<UUID> PHASE_ACTIVE = ConcurrentHashMap.newKeySet();
+    /** True while the /kill command is killing its targets. Commands run on the server thread. */
+    private static boolean commandKill;
 
     @SubscribeEvent
     public static void onPlayerTick(PlayerTickEvent.Post event) {
@@ -193,9 +195,19 @@ public final class ProtectionService {
         return ExtraModulesConfig.ALLOWED_DIMENSIONS.get().isEmpty() || ExtraModulesConfig.ALLOWED_DIMENSIONS.get().contains(dimension);
     }
 
-    /** /kill must always work, so server operators can still remove a protected player. */
+    /** Runs a kill issued by the /kill command; Phase Guard and Emergency Revival let it through. */
+    public static void runCommandKill(Runnable kill) {
+        boolean previous = commandKill;
+        commandKill = true;
+        try {
+            kill.run();
+        } finally {
+            commandKill = previous;
+        }
+    }
+
     private static boolean isCommandKill(DamageSource source) {
-        return source.is(DamageTypes.GENERIC_KILL);
+        return commandKill && source.is(DamageTypes.GENERIC_KILL);
     }
 
     private static void logProtection(String message, Object... args) {

@@ -1,10 +1,10 @@
 {
-  "required": false,
+  "required": true,
   "minVersion": "0.8",
   "package": "com.github.mekanismextramodules.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "LaserBeamPhaseMixin"
+    "KillCommandMixin"
   ],
   "injectors": {
     "defaultRequire": 1
